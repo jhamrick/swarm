@@ -4,6 +4,7 @@ import (
 	"errors"
 	"sort"
 
+	log "github.com/Sirupsen/logrus"
 	"github.com/docker/swarm/cluster"
 	"github.com/samalba/dockerclient"
 )
@@ -53,6 +54,7 @@ func (p *BinPackingPlacementStrategy) PlaceContainer(config *dockerclient.Contai
 
 	sort.Sort(scores)
 
+	log.Debugf("Chose node %s (score: %v)", scores[0].node.Name, scores[0].score)
 	return scores[0].node, nil
 }
 
@@ -77,5 +79,5 @@ func (s scores) Less(i, j int) bool {
 		jp = s[j]
 	)
 
-	return ip.score > jp.score
+	return ip.score < jp.score
 }

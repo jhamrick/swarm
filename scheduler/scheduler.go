@@ -5,7 +5,7 @@ import (
 
 	"github.com/docker/swarm/cluster"
 	"github.com/docker/swarm/scheduler/filter"
-	"github.com/docker/swarm/scheduler/strategy"
+	"github.com/jhamrick/swarm/scheduler/strategy"
 	"github.com/samalba/dockerclient"
 )
 

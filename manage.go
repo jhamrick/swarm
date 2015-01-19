@@ -14,8 +14,8 @@ import (
 	"github.com/docker/swarm/discovery"
 	"github.com/docker/swarm/scheduler"
 	"github.com/docker/swarm/scheduler/filter"
-	"github.com/docker/swarm/scheduler/strategy"
 	"github.com/docker/swarm/state"
+	"github.com/jhamrick/swarm/scheduler/strategy"
 )
 
 type logHandler struct {
